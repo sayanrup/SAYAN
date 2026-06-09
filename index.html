@@ -118,6 +118,7 @@
       padding: 6px 12px; border-radius: 8px; transition: all 0.2s;
     }
     .nav-links a:hover { color: var(--text); background: var(--surface); }
+    .nav-links a.active { color: var(--text); background: var(--surface); font-weight: 600; }
     .nav-cta {
       background: var(--primary) !important; color: #fff !important;
       padding: 6px 16px !important; border-radius: 8px !important;
@@ -300,10 +301,10 @@
         Sayan Samanta
       </a>
       <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#agents">Agents</a>
-        <a href="#skills">Skills</a>
+        <a href="#about" data-section="about">About</a>
+        <a href="#experience" data-section="experience">Experience</a>
+        <a href="#agents" data-section="agents">Agents</a>
+        <a href="#skills" data-section="skills">Skills</a>
         <a href="mailto:sayan.samanta2015@gmail.com" class="nav-cta">Contact</a>
       </div>
       <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
@@ -370,7 +371,7 @@
       <h2 class="section-title">A PM who ships, then builds.</h2>
       <p class="section-sub">Professional summary from the CV, grounded in real impact.</p>
       <div class="card">
-        <p style="font-size:15.5px; line-height:1.8; color: #c8c8e0;">
+        <p style="font-size:15.5px; line-height:1.8; color: var(--text); opacity: 0.85;">
           Product Manager with 5+ years of experience building growth, platform, and marketplace products at
           <strong style="color:var(--text)">IndiaMART</strong> — across <strong style="color:var(--text)">45M+ indexed product pages</strong> and
           <strong style="color:var(--text)">22M+ monthly active users</strong>. Proven track record of owning product strategy,
@@ -659,6 +660,32 @@
         label.textContent = 'Light';
       }
     }
+
+    // ── Active nav on scroll ──
+    const navLinks = document.querySelectorAll('.nav-links a[data-section]');
+    const sections = ['about', 'agents', 'experience', 'skills'];
+
+    function setActive(id) {
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.dataset.section === id);
+      });
+    }
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) setActive(e.target.id);
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) sectionObserver.observe(el);
+    });
+
+    // Clear active when scrolled back to top
+    window.addEventListener('scroll', () => {
+      if (window.scrollY < 200) navLinks.forEach(a => a.classList.remove('active'));
+    }, { passive: true });
 
     // ── Fade-in on scroll ──
     const observer = new IntersectionObserver((entries) => {
