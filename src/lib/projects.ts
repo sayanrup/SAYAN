@@ -1,4 +1,4 @@
-export type Agent = {
+export type Project = {
   slug: string;
   name: string;
   icon: string;
@@ -11,7 +11,7 @@ export type Agent = {
   techStack: string[];
 };
 
-export const agents: Agent[] = [
+export const projects: Project[] = [
   {
     slug: "survive-the-z",
     name: "Vibe Coded RPG Game",
@@ -123,4 +123,4 @@ export const agents: Agent[] = [
   },
 ];
 
-export const getAgent = (slug: string) => agents.find((a) => a.slug === slug);
+export const getProject = (slug: string) => projects.find((p) => p.slug === slug);

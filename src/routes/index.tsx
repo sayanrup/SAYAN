@@ -1,13 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { agents } from "@/lib/agents";
-import { AgentCard } from "@/components/agent-card";
+import { projects } from "@/lib/projects";
+import { ProjectCard } from "@/components/project-card";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Sayan Technologies — AI Agents Built for Real Business Problems" },
+      { title: "Sayan Technologies — AI Projects Built for Real Business Problems" },
       { name: "description", content: "Practical AI automation for SEO, design systems, lead qualification, and customer support. Built by a Product Manager who ships." },
-      { property: "og:title", content: "Sayan Technologies — AI Agents Built for Real Business Problems" },
+      { property: "og:title", content: "Sayan Technologies — AI Projects Built for Real Business Problems" },
       { property: "og:description", content: "Practical AI automation for SEO, design systems, lead qualification, and customer support." },
       { property: "og:url", content: "/" },
     ],
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-  const featured = agents.slice(0, 3);
+  const featured = projects.slice(0, 3);
   return (
     <>
       <section className="container-page pt-20 pb-24 sm:pt-28">
@@ -27,7 +27,7 @@ function Home() {
             Product Manager · AI Systems & Automation
           </div>
           <h1 className="mt-6 font-display text-5xl font-semibold leading-[1.05] sm:text-6xl">
-            AI Agents Built for <span className="gradient-text">Real Business Problems</span>
+            AI Projects Built for <span className="gradient-text">Real Business Problems</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
             Practical automation for SEO, design systems, lead qualification, and customer support.
@@ -35,10 +35,10 @@ function Home() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
-              to="/agents"
+              to="/projects"
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-all hover:opacity-90"
             >
-              Explore the Agents
+              Explore the Projects
               <span aria-hidden>→</span>
             </Link>
             <Link
@@ -70,22 +70,22 @@ function Home() {
       <section className="container-page py-20">
         <div className="flex items-end justify-between gap-6">
           <div>
-            <h2 className="font-display text-3xl font-semibold sm:text-4xl">Featured Agents</h2>
+            <h2 className="font-display text-3xl font-semibold sm:text-4xl">Featured Projects</h2>
             <p className="mt-2 text-muted-foreground">A few systems shipped recently.</p>
           </div>
-          <Link to="/agents" className="hidden text-sm font-medium text-primary hover:underline sm:inline">
+          <Link to="/projects" className="hidden text-sm font-medium text-primary hover:underline sm:inline">
             View all →
           </Link>
         </div>
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {featured.map((a) => <AgentCard key={a.slug} agent={a} />)}
+          {featured.map((p) => <ProjectCard key={p.slug} project={p} />)}
         </div>
         <div className="mt-10 text-center">
           <Link
-            to="/agents"
+            to="/projects"
             className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:opacity-90"
           >
-            Explore the Agents →
+            Explore the Projects →
           </Link>
         </div>
       </section>

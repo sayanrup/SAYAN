@@ -15,7 +15,7 @@ export function SiteHeader() {
         <nav className="flex items-center gap-1 text-sm">
           {[
             { to: "/", label: "Home" },
-            { to: "/agents", label: "Agents" },
+            { to: "/projects", label: "Projects" },
             { to: "/about", label: "About" },
             { to: "/contact", label: "Contact" },
           ].map((item) => (

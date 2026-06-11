@@ -79,10 +79,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sayan Technologies — AI Agents for Real Business Problems" },
+      { title: "Sayan Technologies — AI Projects for Real Business Problems" },
       { name: "description", content: "Portfolio of a Product Manager building practical AI automation for SEO, design systems, lead qualification, and customer support." },
       { name: "author", content: "Sayan Technologies" },
-      { property: "og:title", content: "Sayan Technologies — AI Agents for Real Business Problems" },
+      { property: "og:title", content: "Sayan Technologies — AI Projects for Real Business Problems" },
       { property: "og:description", content: "Practical automation for SEO, design systems, lead qualification, and customer support." },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Sayan Technologies" },

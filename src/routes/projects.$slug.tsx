@@ -1,54 +1,54 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { agents, getAgent, type Agent } from "@/lib/agents";
+import { projects, getProject, type Project } from "@/lib/projects";
 
-export const Route = createFileRoute("/agents/$slug")({
+export const Route = createFileRoute("/projects/$slug")({
   loader: ({ params }) => {
-    const agent = getAgent(params.slug);
-    if (!agent) throw notFound();
-    return { agent };
+    const project = getProject(params.slug);
+    if (!project) throw notFound();
+    return { project };
   },
   head: ({ loaderData }) => {
-    const a = loaderData?.agent;
-    const title = a ? `${a.name} — Sayan Technologies` : "Agent — Sayan Technologies";
-    const desc = a?.shortDescription ?? "AI agent built for a real business problem.";
+    const p = loaderData?.project;
+    const title = p ? `${p.name} — Sayan Technologies` : "Project — Sayan Technologies";
+    const desc = p?.shortDescription ?? "AI project built for a real business problem.";
     return {
       meta: [
         { title },
         { name: "description", content: desc },
         { property: "og:title", content: title },
         { property: "og:description", content: desc },
-        { property: "og:url", content: a ? `/agents/${a.slug}` : "/agents" },
+        { property: "og:url", content: p ? `/projects/${p.slug}` : "/projects" },
       ],
-      links: a ? [{ rel: "canonical", href: `/agents/${a.slug}` }] : [],
+      links: p ? [{ rel: "canonical", href: `/projects/${p.slug}` }] : [],
     };
   },
-  component: AgentDetail,
+  component: ProjectDetail,
   notFoundComponent: () => (
     <div className="container-page py-24 text-center">
-      <h1 className="font-display text-3xl font-semibold">Agent not found</h1>
-      <Link to="/agents" className="mt-4 inline-block text-primary hover:underline">
-        Back to all agents
+      <h1 className="font-display text-3xl font-semibold">Project not found</h1>
+      <Link to="/projects" className="mt-4 inline-block text-primary hover:underline">
+        Back to all projects
       </Link>
     </div>
   ),
 });
 
-function AgentDetail() {
-  const { agent } = Route.useLoaderData() as { agent: Agent };
+function ProjectDetail() {
+  const { project } = Route.useLoaderData() as { project: Project };
   return (
     <article className="container-page py-16">
-      <Link to="/agents" className="text-sm text-muted-foreground hover:text-foreground">
-        ← All agents
+      <Link to="/projects" className="text-sm text-muted-foreground hover:text-foreground">
+        ← All projects
       </Link>
 
       <header className="mt-6 max-w-3xl">
         <div className="flex flex-wrap gap-1.5">
-          {agent.tags.map((t) => <span key={t} className="tag-chip">{t}</span>)}
+          {project.tags.map((t) => <span key={t} className="tag-chip">{t}</span>)}
         </div>
-        <h1 className="mt-4 font-display text-4xl font-semibold sm:text-5xl">{agent.name}</h1>
-        <p className="mt-4 text-lg text-muted-foreground">{agent.shortDescription}</p>
+        <h1 className="mt-4 font-display text-4xl font-semibold sm:text-5xl">{project.name}</h1>
+        <p className="mt-4 text-lg text-muted-foreground">{project.shortDescription}</p>
         <div className="mt-6 flex flex-wrap gap-3">
-          {agent.liveUrls?.map((l) => (
+          {project.liveUrls?.map((l) => (
             <a
               key={l.url}
               href={l.url}
@@ -60,7 +60,7 @@ function AgentDetail() {
             </a>
           ))}
           <a
-            href={agent.github}
+            href={project.github}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface/40 px-5 py-2.5 text-sm font-semibold hover:bg-secondary"
@@ -74,11 +74,11 @@ function AgentDetail() {
       <section className="mt-14 grid gap-10 lg:grid-cols-3">
         <div className="lg:col-span-2">
           <h2 className="font-display text-xl font-semibold">The problem</h2>
-          <p className="mt-3 text-muted-foreground leading-relaxed">{agent.problem}</p>
+          <p className="mt-3 text-muted-foreground leading-relaxed">{project.problem}</p>
 
           <h2 className="mt-12 font-display text-xl font-semibold">How it works</h2>
           <ol className="mt-4 grid gap-4 sm:grid-cols-3">
-            {agent.howItWorks.map((step, i) => (
+            {project.howItWorks.map((step, i) => (
               <li key={step.title} className="surface-card p-5">
                 <div className="font-display text-sm font-semibold text-primary">
                   Step {String(i + 1).padStart(2, "0")}
@@ -101,22 +101,22 @@ function AgentDetail() {
               Tech stack
             </h3>
             <ul className="mt-3 flex flex-wrap gap-1.5">
-              {agent.techStack.map((t) => <li key={t} className="tag-chip">{t}</li>)}
+              {project.techStack.map((t) => <li key={t} className="tag-chip">{t}</li>)}
             </ul>
           </div>
           <div className="surface-card p-6">
             <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-              Other agents
+              Other projects
             </h3>
             <ul className="mt-3 space-y-2">
-              {agents.filter((a) => a.slug !== agent.slug).slice(0, 4).map((a) => (
-                <li key={a.slug}>
+              {projects.filter((p) => p.slug !== project.slug).slice(0, 4).map((p) => (
+                <li key={p.slug}>
                   <Link
-                    to="/agents/$slug"
-                    params={{ slug: a.slug }}
+                    to="/projects/$slug"
+                    params={{ slug: p.slug }}
                     className="text-sm text-foreground hover:text-primary transition-colors"
                   >
-                    {a.name} →
+                    {p.name} →
                   </Link>
                 </li>
               ))}

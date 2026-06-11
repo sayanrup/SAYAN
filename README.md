@@ -1,6 +1,6 @@
-# Sayan Samanta — Portfolio & AI Agents
+# Sayan Samanta — Portfolio & AI Projects
 
-Personal portfolio and a home for the AI agents I've built while learning AI.
+Personal portfolio and a home for the AI projects I've built while learning AI.
 
 © 2025 Sayan Samanta. Made as part of my journey learning AI.
 
@@ -8,11 +8,11 @@ Personal portfolio and a home for the AI agents I've built while learning AI.
 
 ## About
 
-I'm a Product Manager with 5+ years of experience at IndiaMART, working on growth, platform, and marketplace products at 22M+ MAU scale. This site is where I document the AI agents I build as I explore what's possible with modern AI tooling — practical tools scoped to real problems, not demos.
+I'm a Product Manager with 5+ years of experience at IndiaMART, working on growth, platform, and marketplace products at 22M+ MAU scale. This site is where I document the AI projects I build as I explore what's possible with modern AI tooling — practical tools scoped to real problems, not demos.
 
-## Live Agents
+## Live Projects
 
-| Agent | Description | Links |
+| Project | Description | Links |
 |-------|-------------|-------|
 | **Vibe Coded RPG Game** | A browser-based zombie survival RPG with an AI Game Master that narrates free-text actions via a live LLM | [Launch](https://sayanrup.github.io/Survive_The_Z/) · [GitHub](https://github.com/sayanrup/Survive_The_Z) |
 | **HTML Audit Agent** | Audits any URL for HTML quality, SEO, and accessibility issues | [Railway](https://htmlauditoragent-production.up.railway.app/) · [GitHub Pages](https://sayanrup.github.io/HTML_Auditor_Agent/html-audit-agent.html) |

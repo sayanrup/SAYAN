@@ -5,9 +5,9 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Sayan Technologies" },
-      { name: "description", content: "Get in touch about AI agent projects, product consulting, or automation engagements." },
+      { name: "description", content: "Get in touch about AI projects, product consulting, or automation engagements." },
       { property: "og:title", content: "Contact — Sayan Technologies" },
-      { property: "og:description", content: "Get in touch about AI agent projects, product consulting, or automation engagements." },
+      { property: "og:description", content: "Get in touch about AI projects, product consulting, or automation engagements." },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
@@ -23,7 +23,7 @@ function Contact() {
         <div>
           <h1 className="font-display text-4xl font-semibold sm:text-5xl">Let's talk.</h1>
           <p className="mt-4 text-lg text-muted-foreground">
-            Have a problem an agent might solve? Want to discuss a build? Drop a note.
+            Have a problem an AI project might solve? Want to discuss a build? Drop a note.
           </p>
           <div className="mt-8 flex gap-3">
             <a href="https://linkedin.com/in/sayan-samanta-b92792131" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="rounded-lg border border-border bg-surface/40 p-3 hover:bg-secondary">
