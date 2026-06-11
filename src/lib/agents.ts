@@ -86,6 +86,35 @@ export const agents: Agent[] = [
     ],
     techStack: ["JavaScript", "HTML", "CSS", "Data Visualization", "AI Analysis"],
   },
+  {
+    slug: "survive-the-z",
+    name: "Survive The Z",
+    icon: "gamepad",
+    shortDescription:
+      "A browser-based zombie survival RPG with an AI Game Master that narrates your choices in real time.",
+    tags: ["Game", "RPG", "AI"],
+    github: "https://github.com/sayanrup/Survive_The_Z",
+    problem:
+      "Most browser games are static — the same encounters and outcomes for every player, with no room for the unexpected actions people actually want to try. Survive The Z explores what happens when an LLM sits inside the game loop itself, turning free-text player actions into narrated consequences instead of a fixed menu of choices.",
+    howItWorks: [
+      {
+        title: "Survive",
+        description:
+          "Scavenge for supplies, craft weapons and medical kits, and manage hunger, thirst, stamina, and health while exploring a map of risk/reward locations.",
+      },
+      {
+        title: "Fight",
+        description:
+          "Turn-based combat against different zombie types, with equippable weapons and armor that change your odds.",
+      },
+      {
+        title: "Narrate",
+        description:
+          "An AI Game Master panel takes free-text actions and uses a live LLM (via OpenRouter, with a choice of models or your own API key) to dynamically narrate outcomes and adjust game state — with a classic offline mode for play without an API key.",
+      },
+    ],
+    techStack: ["JavaScript (ES Modules)", "HTML", "CSS", "OpenRouter LLM API"],
+  },
 ];
 
 export const getAgent = (slug: string) => agents.find((a) => a.slug === slug);
