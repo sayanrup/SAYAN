@@ -94,6 +94,12 @@ export const agents: Agent[] = [
       "A browser-based zombie survival RPG with an AI Game Master that narrates your choices in real time.",
     tags: ["Game", "RPG", "AI"],
     github: "https://github.com/sayanrup/Survive_The_Z",
+    liveUrls: [
+      {
+        label: "Launch (GitHub Pages)",
+        url: "https://sayanrup.github.io/Survive_The_Z/",
+      },
+    ],
     problem:
       "Most browser games are static — the same encounters and outcomes for every player, with no room for the unexpected actions people actually want to try. Survive The Z explores what happens when an LLM sits inside the game loop itself, turning free-text player actions into narrated consequences instead of a fixed menu of choices.",
     howItWorks: [
