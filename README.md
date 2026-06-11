@@ -14,9 +14,9 @@ I'm a Product Manager with 5+ years of experience at IndiaMART, working on growt
 
 | Agent | Description | Links |
 |-------|-------------|-------|
+| **Vibe Coded RPG Game** | A browser-based zombie survival RPG with an AI Game Master that narrates free-text actions via a live LLM | [Launch](https://sayanrup.github.io/Survive_The_Z/) · [GitHub](https://github.com/sayanrup/Survive_The_Z) |
 | **HTML Audit Agent** | Audits any URL for HTML quality, SEO, and accessibility issues | [Railway](https://htmlauditoragent-production.up.railway.app/) · [GitHub Pages](https://sayanrup.github.io/HTML_Auditor_Agent/html-audit-agent.html) |
 | **KPI Analyzer Dashboard** | Upload KPI data and get AI-driven trend analysis and insights | [GitHub Pages](https://sayanrup.github.io/KPI_Analyzer_Dashboard/KPI_dashboard.html) |
-| **Survive The Z** | A browser-based zombie survival RPG with an AI Game Master that narrates free-text actions via a live LLM | [GitHub](https://github.com/sayanrup/Survive_The_Z) |
 
 ## Tech Stack
 
