@@ -48,6 +48,41 @@ export const projects: Project[] = [
     techStack: ["JavaScript (ES Modules)", "HTML", "CSS", "OpenRouter LLM API"],
   },
   {
+    slug: "quality-audit-agent",
+    name: "Quality Audit Agent",
+    icon: "target",
+    shortDescription:
+      "An AI auditor that checks buy leads and product listings for quality issues using vision-capable models.",
+    tags: ["Leads", "Quality", "AI"],
+    github: "https://github.com/sayanrup/Lead-Quality-Audit-Agent",
+    liveUrls: [
+      {
+        label: "Launch (GitHub Pages)",
+        url: "https://sayanrup.github.io/Lead-Quality-Audit-Agent/",
+      },
+    ],
+    problem:
+      "Marketplaces collect leads and product listings faster than anyone can manually review them for quality. Mismatched specs, vague single-word titles, leaked PII, off-platform selling intent, and implausible quantities or prices slip through — degrading buyer trust and wasting sales effort on bad leads.",
+    howItWorks: [
+      {
+        title: "Input",
+        description:
+          "Paste a JSON lead object, upload a screenshot, or provide a product URL — no setup beyond an OpenRouter API key stored locally in the browser.",
+      },
+      {
+        title: "Audit",
+        description:
+          "Runs 5 lead-quality checks (spec/title mismatch, single-word title enrichment, PII detection, selling-intent flagging, implausible quantity) and 3 product-quality checks using vision analysis against product imagery — with rule-based gating to minimise API calls.",
+      },
+      {
+        title: "Flag",
+        description:
+          "Returns structured, per-check results so low-quality leads and listings can be triaged or rejected before they reach a human reviewer.",
+      },
+    ],
+    techStack: ["JavaScript", "HTML", "CSS", "OpenRouter Vision API"],
+  },
+  {
     slug: "html-audit-agent",
     name: "HTML Audit Agent",
     icon: "search",
