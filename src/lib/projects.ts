@@ -83,6 +83,41 @@ export const projects: Project[] = [
     techStack: ["JavaScript", "HTML", "CSS", "OpenRouter Vision API"],
   },
   {
+    slug: "mafia-life",
+    name: "Underworld: Mafia Life",
+    icon: "gamepad",
+    shortDescription:
+      "A crime syndicate management RPG — rise from Associate to Boss while Claude generates noir narrative flavor for every event.",
+    tags: ["Game", "RPG", "AI"],
+    github: "https://github.com/sayanrup/Mafia_Life",
+    liveUrls: [
+      {
+        label: "Launch (GitHub Pages)",
+        url: "https://sayanrup.github.io/Mafia_Life/",
+      },
+    ],
+    problem:
+      "Crime syndicate management games are usually either deep simulations with dry, repetitive text, or narrative-heavy games with shallow systems. Underworld explores what happens when a deterministic management sim — territory, crew, money, heat — is paired with an LLM that writes only the atmosphere, so every operation, shakedown, and turf war reads like its own scene without ever touching the underlying numbers.",
+    howItWorks: [
+      {
+        title: "Build",
+        description:
+          "Create your character and climb the ranks from Associate to Boss in a procedurally named city, managing three actions per day across crew, territory, and finances.",
+      },
+      {
+        title: "Manage",
+        description:
+          "Run businesses, extortion rackets, and money laundering while balancing reputation against heat from police, detectives, and federal agents — recruit and equip crew, and navigate gang and cartel relationships.",
+      },
+      {
+        title: "Narrate",
+        description:
+          "A Claude-powered module (via the Anthropic API, with your own key stored locally) generates short noir flavor text for events while every outcome stays fully deterministic — and the game degrades gracefully to plain text without a key.",
+      },
+    ],
+    techStack: ["JavaScript", "HTML", "CSS", "Claude API"],
+  },
+  {
     slug: "html-audit-agent",
     name: "HTML Audit Agent",
     icon: "search",
