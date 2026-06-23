@@ -14,6 +14,7 @@ I'm a Product Manager with 5+ years of experience at IndiaMART, working on growt
 
 | Project | Description | Links |
 |-------|-------------|-------|
+| **Job Search Automation** | Scans Gmail for job leads, generates tailored CVs, cover letters, and outreach messages via AI, and saves to Drive, Gmail drafts, and Sheets | [Launch](https://sayanrup.github.io/Job_Hunt) · [GitHub](https://github.com/sayanrup/Job_Hunt) |
 | **Vibe Coded RPG Game** | A browser-based zombie survival RPG with an AI Game Master that narrates free-text actions via a live LLM | [Launch](https://sayanrup.github.io/Survive_The_Z/) · [GitHub](https://github.com/sayanrup/Survive_The_Z) |
 | **Quality Audit Agent** | An AI auditor that checks buy leads and product listings for quality issues using vision-capable models | [Launch](https://sayanrup.github.io/Lead-Quality-Audit-Agent/) · [GitHub](https://github.com/sayanrup/Lead-Quality-Audit-Agent) |
 | **Underworld: Mafia Life** | A crime syndicate management RPG — rise from Associate to Boss, with Claude generating noir narrative flavor for every event | [Launch](https://sayanrup.github.io/Mafia_Life/) · [GitHub](https://github.com/sayanrup/Mafia_Life) |

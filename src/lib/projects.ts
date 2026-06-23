@@ -13,6 +13,49 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "job-hunt",
+    name: "Job Search Automation",
+    icon: "target",
+    shortDescription:
+      "Automates job applications end-to-end — scans Gmail for leads, generates tailored CVs and cover letters via AI, and saves everything to Drive, Gmail, and Sheets.",
+    tags: ["Automation", "AI", "Jobs"],
+    github: "https://github.com/sayanrup/Job_Hunt",
+    liveUrls: [
+      {
+        label: "Launch (GitHub Pages)",
+        url: "https://sayanrup.github.io/Job_Hunt",
+      },
+    ],
+    problem:
+      "Job hunting at scale means repeating the same manual loop for every opening: open the email, read the JD, rewrite your CV, draft a cover letter, send an outreach message, log it in a tracker. The work isn't skilled — it's just slow. This tool collapses that loop into a single browser session with no backend and no data leaving your Google account.",
+    howItWorks: [
+      {
+        title: "Scan",
+        description:
+          "Connects to Gmail via OAuth 2.0 and scans for job suggestion emails from Naukri, LinkedIn, and Instahyre over a 1, 3, or 7-day window — no server, no data stored outside your browser.",
+      },
+      {
+        title: "Generate",
+        description:
+          "Uses Claude (via OpenRouter) to create a tailored CV, cover letter, and LinkedIn outreach message for each opportunity — customised to the job description automatically.",
+      },
+      {
+        title: "Save",
+        description:
+          "Uploads CVs to Google Drive, creates Gmail drafts, and logs every application in Google Sheets. Mark an application as Sent and the CV is auto-deleted on the next run.",
+      },
+    ],
+    techStack: [
+      "JavaScript (ES Modules)",
+      "HTML",
+      "CSS",
+      "OpenRouter API",
+      "Gmail API",
+      "Google Drive API",
+      "Google Sheets API",
+    ],
+  },
+  {
     slug: "survive-the-z",
     name: "Vibe Coded RPG Game",
     icon: "gamepad",
