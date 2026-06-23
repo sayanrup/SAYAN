@@ -25,6 +25,10 @@ export const projects: Project[] = [
         label: "Launch (GitHub Pages)",
         url: "https://sayanrup.github.io/Job_Hunt",
       },
+      {
+        label: "Launch (AppScript)",
+        url: "https://script.google.com/macros/s/AKfycbzi6fzezTyeyT_BiW4AQnVWCkc5JxWlTbyAZxvfwcOS6CnwjkFoNXc9g2kOGbRjmu2L/exec",
+      },
     ],
     problem:
       "Job hunting at scale means repeating the same manual loop for every opening: open the email, read the JD, rewrite your CV, draft a cover letter, send an outreach message, log it in a tracker. The work isn't skilled — it's just slow. This tool collapses that loop into a single browser session with no backend and no data leaving your Google account.",
