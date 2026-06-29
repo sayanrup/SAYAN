@@ -13,88 +13,6 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "job-hunt",
-    name: "Job Search Automation",
-    icon: "target",
-    shortDescription:
-      "Automates job applications end-to-end — scans Gmail for leads, generates tailored CVs and cover letters via AI, and saves everything to Drive, Gmail, and Sheets.",
-    tags: ["Automation", "AI", "Jobs"],
-    github: "https://github.com/sayanrup/Job_Hunt",
-    liveUrls: [
-      {
-        label: "Launch (GitHub Pages)",
-        url: "https://sayanrup.github.io/Job_Hunt",
-      },
-      {
-        label: "Launch (AppScript)",
-        url: "https://script.google.com/macros/s/AKfycbzi6fzezTyeyT_BiW4AQnVWCkc5JxWlTbyAZxvfwcOS6CnwjkFoNXc9g2kOGbRjmu2L/exec",
-      },
-    ],
-    problem:
-      "Job hunting at scale means repeating the same manual loop for every opening: open the email, read the JD, rewrite your CV, draft a cover letter, send an outreach message, log it in a tracker. The work isn't skilled — it's just slow. This tool collapses that loop into a single browser session with no backend and no data leaving your Google account.",
-    howItWorks: [
-      {
-        title: "Scan",
-        description:
-          "Connects to Gmail via OAuth 2.0 and scans for job suggestion emails from Naukri, LinkedIn, and Instahyre over a 1, 3, or 7-day window — no server, no data stored outside your browser.",
-      },
-      {
-        title: "Generate",
-        description:
-          "Uses Claude (via OpenRouter) to create a tailored CV, cover letter, and LinkedIn outreach message for each opportunity — customised to the job description automatically.",
-      },
-      {
-        title: "Save",
-        description:
-          "Uploads CVs to Google Drive, creates Gmail drafts, and logs every application in Google Sheets. Mark an application as Sent and the CV is auto-deleted on the next run.",
-      },
-    ],
-    techStack: [
-      "JavaScript (ES Modules)",
-      "HTML",
-      "CSS",
-      "OpenRouter API",
-      "Gmail API",
-      "Google Drive API",
-      "Google Sheets API",
-    ],
-  },
-  {
-    slug: "survive-the-z",
-    name: "Vibe Coded RPG Game",
-    icon: "gamepad",
-    shortDescription:
-      "A browser-based zombie survival RPG with an AI Game Master that narrates your choices in real time.",
-    tags: ["Game", "RPG", "AI"],
-    github: "https://github.com/sayanrup/Survive_The_Z",
-    liveUrls: [
-      {
-        label: "Launch (GitHub Pages)",
-        url: "https://sayanrup.github.io/Survive_The_Z/",
-      },
-    ],
-    problem:
-      "Most browser games are static — the same encounters and outcomes for every player, with no room for the unexpected actions people actually want to try. Survive The Z explores what happens when an LLM sits inside the game loop itself, turning free-text player actions into narrated consequences instead of a fixed menu of choices.",
-    howItWorks: [
-      {
-        title: "Survive",
-        description:
-          "Scavenge for supplies, craft weapons and medical kits, and manage hunger, thirst, stamina, and health while exploring a map of risk/reward locations.",
-      },
-      {
-        title: "Fight",
-        description:
-          "Turn-based combat against different zombie types, with equippable weapons and armor that change your odds.",
-      },
-      {
-        title: "Narrate",
-        description:
-          "An AI Game Master panel takes free-text actions and uses a live LLM (via OpenRouter, with a choice of models or your own API key) to dynamically narrate outcomes and adjust game state — with a classic offline mode for play without an API key.",
-      },
-    ],
-    techStack: ["JavaScript (ES Modules)", "HTML", "CSS", "OpenRouter LLM API"],
-  },
-  {
     slug: "quality-audit-agent",
     name: "Quality Audit Agent",
     icon: "target",
@@ -130,39 +48,39 @@ export const projects: Project[] = [
     techStack: ["JavaScript", "HTML", "CSS", "OpenRouter Vision API"],
   },
   {
-    slug: "mafia-life",
-    name: "Underworld: Mafia Life",
+    slug: "survive-the-z",
+    name: "Vibe Coded RPG Game",
     icon: "gamepad",
     shortDescription:
-      "A crime syndicate management RPG — rise from Associate to Boss while Claude generates noir narrative flavor for every event.",
+      "A browser-based zombie survival RPG with an AI Game Master that narrates your choices in real time.",
     tags: ["Game", "RPG", "AI"],
-    github: "https://github.com/sayanrup/Mafia_Life",
+    github: "https://github.com/sayanrup/Survive_The_Z",
     liveUrls: [
       {
         label: "Launch (GitHub Pages)",
-        url: "https://sayanrup.github.io/Mafia_Life/",
+        url: "https://sayanrup.github.io/Survive_The_Z/",
       },
     ],
     problem:
-      "Crime syndicate management games are usually either deep simulations with dry, repetitive text, or narrative-heavy games with shallow systems. Underworld explores what happens when a deterministic management sim — territory, crew, money, heat — is paired with an LLM that writes only the atmosphere, so every operation, shakedown, and turf war reads like its own scene without ever touching the underlying numbers.",
+      "Most browser games are static — the same encounters and outcomes for every player, with no room for the unexpected actions people actually want to try. Survive The Z explores what happens when an LLM sits inside the game loop itself, turning free-text player actions into narrated consequences instead of a fixed menu of choices.",
     howItWorks: [
       {
-        title: "Build",
+        title: "Survive",
         description:
-          "Create your character and climb the ranks from Associate to Boss in a procedurally named city, managing three actions per day across crew, territory, and finances.",
+          "Scavenge for supplies, craft weapons and medical kits, and manage hunger, thirst, stamina, and health while exploring a map of risk/reward locations.",
       },
       {
-        title: "Manage",
+        title: "Fight",
         description:
-          "Run businesses, extortion rackets, and money laundering while balancing reputation against heat from police, detectives, and federal agents — recruit and equip crew, and navigate gang and cartel relationships.",
+          "Turn-based combat against different zombie types, with equippable weapons and armor that change your odds.",
       },
       {
         title: "Narrate",
         description:
-          "A Claude-powered module (via the Anthropic API, with your own key stored locally) generates short noir flavor text for events while every outcome stays fully deterministic — and the game degrades gracefully to plain text without a key.",
+          "An AI Game Master panel takes free-text actions and uses a live LLM (via OpenRouter, with a choice of models or your own API key) to dynamically narrate outcomes and adjust game state — with a classic offline mode for play without an API key.",
       },
     ],
-    techStack: ["JavaScript", "HTML", "CSS", "Claude API"],
+    techStack: ["JavaScript (ES Modules)", "HTML", "CSS", "OpenRouter LLM API"],
   },
   {
     slug: "html-audit-agent",
@@ -237,6 +155,88 @@ export const projects: Project[] = [
       },
     ],
     techStack: ["JavaScript", "HTML", "CSS", "Data Visualization", "AI Analysis"],
+  },
+  {
+    slug: "job-hunt",
+    name: "Job Search Automation",
+    icon: "target",
+    shortDescription:
+      "Automates job applications end-to-end — scans Gmail for leads, generates tailored CVs and cover letters via AI, and saves everything to Drive, Gmail, and Sheets.",
+    tags: ["Automation", "AI", "Jobs"],
+    github: "https://github.com/sayanrup/Job_Hunt",
+    liveUrls: [
+      {
+        label: "Launch (GitHub Pages)",
+        url: "https://sayanrup.github.io/Job_Hunt",
+      },
+      {
+        label: "Launch (AppScript)",
+        url: "https://script.google.com/macros/s/AKfycbzi6fzezTyeyT_BiW4AQnVWCkc5JxWlTbyAZxvfwcOS6CnwjkFoNXc9g2kOGbRjmu2L/exec",
+      },
+    ],
+    problem:
+      "Job hunting at scale means repeating the same manual loop for every opening: open the email, read the JD, rewrite your CV, draft a cover letter, send an outreach message, log it in a tracker. The work isn't skilled — it's just slow. This tool collapses that loop into a single browser session with no backend and no data leaving your Google account.",
+    howItWorks: [
+      {
+        title: "Scan",
+        description:
+          "Connects to Gmail via OAuth 2.0 and scans for job suggestion emails from Naukri, LinkedIn, and Instahyre over a 1, 3, or 7-day window — no server, no data stored outside your browser.",
+      },
+      {
+        title: "Generate",
+        description:
+          "Uses Claude (via OpenRouter) to create a tailored CV, cover letter, and LinkedIn outreach message for each opportunity — customised to the job description automatically.",
+      },
+      {
+        title: "Save",
+        description:
+          "Uploads CVs to Google Drive, creates Gmail drafts, and logs every application in Google Sheets. Mark an application as Sent and the CV is auto-deleted on the next run.",
+      },
+    ],
+    techStack: [
+      "JavaScript (ES Modules)",
+      "HTML",
+      "CSS",
+      "OpenRouter API",
+      "Gmail API",
+      "Google Drive API",
+      "Google Sheets API",
+    ],
+  },
+  {
+    slug: "mafia-life",
+    name: "Underworld: Mafia Life",
+    icon: "gamepad",
+    shortDescription:
+      "A crime syndicate management RPG — rise from Associate to Boss while Claude generates noir narrative flavor for every event.",
+    tags: ["Game", "RPG", "AI"],
+    github: "https://github.com/sayanrup/Mafia_Life",
+    liveUrls: [
+      {
+        label: "Launch (GitHub Pages)",
+        url: "https://sayanrup.github.io/Mafia_Life/",
+      },
+    ],
+    problem:
+      "Crime syndicate management games are usually either deep simulations with dry, repetitive text, or narrative-heavy games with shallow systems. Underworld explores what happens when a deterministic management sim — territory, crew, money, heat — is paired with an LLM that writes only the atmosphere, so every operation, shakedown, and turf war reads like its own scene without ever touching the underlying numbers.",
+    howItWorks: [
+      {
+        title: "Build",
+        description:
+          "Create your character and climb the ranks from Associate to Boss in a procedurally named city, managing three actions per day across crew, territory, and finances.",
+      },
+      {
+        title: "Manage",
+        description:
+          "Run businesses, extortion rackets, and money laundering while balancing reputation against heat from police, detectives, and federal agents — recruit and equip crew, and navigate gang and cartel relationships.",
+      },
+      {
+        title: "Narrate",
+        description:
+          "A Claude-powered module (via the Anthropic API, with your own key stored locally) generates short noir flavor text for events while every outcome stays fully deterministic — and the game degrades gracefully to plain text without a key.",
+      },
+    ],
+    techStack: ["JavaScript", "HTML", "CSS", "Claude API"],
   },
 ];
 
