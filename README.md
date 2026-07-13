@@ -20,6 +20,7 @@ I'm a Product Manager with 5+ years of experience at IndiaMART, working on growt
 | **Underworld: Mafia Life** | A crime syndicate management RPG — rise from Associate to Boss, with Claude generating noir narrative flavor for every event | [Launch](https://sayanrup.github.io/Mafia_Life/) · [GitHub](https://github.com/sayanrup/Mafia_Life) |
 | **HTML Audit Agent** | Audits any URL for HTML quality, SEO, and accessibility issues | [Railway](https://htmlauditoragent-production.up.railway.app/) · [GitHub Pages](https://sayanrup.github.io/HTML_Auditor_Agent/html-audit-agent.html) |
 | **KPI Analyzer Dashboard** | Upload KPI data and get AI-driven trend analysis and insights | [GitHub Pages](https://sayanrup.github.io/KPI_Analyzer_Dashboard/KPI_dashboard.html) |
+| **Bug Tracker Dashboard** | Upload bug exports and track SLA breach rates by priority with working-day TAT calculations and exception management | [Launch](https://sayanrup.github.io/Bug_Tracker/) · [GitHub](https://github.com/sayanrup/Bug_Tracker) |
 
 ## Tech Stack
 

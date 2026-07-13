@@ -238,6 +238,41 @@ export const projects: Project[] = [
     ],
     techStack: ["JavaScript", "HTML", "CSS", "Claude API"],
   },
+  {
+    slug: "bug-tracker",
+    name: "Bug Tracker Dashboard",
+    icon: "search",
+    shortDescription:
+      "Upload your bug export and instantly track SLA breach rates by priority, manage exceptions, and monitor closure performance — fully client-side.",
+    tags: ["Analytics", "SLA", "Dashboard"],
+    github: "https://github.com/sayanrup/Bug_Tracker",
+    liveUrls: [
+      {
+        label: "Launch (GitHub Pages)",
+        url: "https://sayanrup.github.io/Bug_Tracker/",
+      },
+    ],
+    problem:
+      "Bug closure SLA tracking typically lives in a shared spreadsheet that goes stale, or in a BI tool that needs a query every time. Teams lack a fast, filterable view of which bugs are breaching their TAT windows and why — so breach counts get reported but exceptions never get documented.",
+    howItWorks: [
+      {
+        title: "Upload",
+        description:
+          "Upload any bug export in Excel or CSV format — the dashboard auto-detects and maps column headers with no manual config needed.",
+      },
+      {
+        title: "Track",
+        description:
+          "Calculates closure deadlines using working-day rules (Mon–Fri, excluding holidays) and priority-based TAT windows: High (2 days), Medium (7 days), Low (30 days).",
+      },
+      {
+        title: "Manage",
+        description:
+          "Flag breached bugs, mark exceptions as Accepted with notes, and filter by date, priority, status, project, or assignee. All settings and accepted exceptions persist in localStorage — no backend required.",
+      },
+    ],
+    techStack: ["JavaScript", "HTML", "CSS", "Chart.js", "SheetJS"],
+  },
 ];
 
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);
