@@ -83,6 +83,35 @@ export const projects: Project[] = [
     techStack: ["JavaScript (ES Modules)", "HTML", "CSS", "OpenRouter LLM API"],
   },
   {
+    slug: "youtube-audio-story",
+    name: "AI YouTube Story Pipeline",
+    icon: "message",
+    shortDescription:
+      "An end-to-end AI pipeline that turns episode outlines into narrated YouTube videos — scripts, images, voice, subtitles, and upload, fully automated.",
+    tags: ["AI", "Automation", "YouTube"],
+    github: "https://github.com/sayanrup/Youtube_Audio_Story",
+    problem:
+      "Producing a consistent AI-narrated YouTube channel means coordinating LLMs, image generators, TTS engines, video editors, and upload tools — each with different inputs and failure modes. One broken step means a half-assembled episode. This pipeline collapses all seven stages into a single orchestrated run driven by an Excel workbook per episode.",
+    howItWorks: [
+      {
+        title: "Write",
+        description:
+          "Takes an episode outline from an Excel workbook, generates a full script via LLM (OpenRouter), and creates matching AI images using Flux Schnell on fal.ai.",
+      },
+      {
+        title: "Produce",
+        description:
+          "Converts the script to narration with Kokoro TTS (local ONNX execution), auto-generates SRT and ASS subtitles, and assembles the full video with Ken Burns effects and color grading — plus a 9:16 YouTube Shorts cut.",
+      },
+      {
+        title: "Publish",
+        description:
+          "Generates an AI thumbnail (background + text overlay) and SEO-optimized metadata, then uploads the long-form video and Short to YouTube automatically. Individual stages can be skipped or resumed.",
+      },
+    ],
+    techStack: ["Python", "OpenRouter API", "Flux Schnell (fal.ai)", "Kokoro TTS", "FFmpeg", "YouTube API"],
+  },
+  {
     slug: "html-audit-agent",
     name: "HTML Audit Agent",
     icon: "search",
