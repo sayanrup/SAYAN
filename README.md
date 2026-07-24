@@ -14,6 +14,7 @@ I'm a Product Manager with 5+ years of experience at IndiaMART, working on growt
 
 | Project | Description | Links |
 |-------|-------------|-------|
+| **Crypto Trading Bot** | Support/resistance + structure-shift algo for CoinDCX INR futures — rule-based live execution, DeepSeek backtest filter to measure LLM edge | [GitHub](https://github.com/sayanrup/Crypto-Trading-Bot) |
 | **Job Search Automation** | Scans Gmail for job leads, generates tailored CVs, cover letters, and outreach messages via AI, and saves to Drive, Gmail drafts, and Sheets | [Launch](https://sayanrup.github.io/Job_Hunt) · [GitHub](https://github.com/sayanrup/Job_Hunt) |
 | **Vibe Coded RPG Game** | A browser-based zombie survival RPG with an AI Game Master that narrates free-text actions via a live LLM | [Launch](https://sayanrup.github.io/Survive_The_Z/) · [GitHub](https://github.com/sayanrup/Survive_The_Z) |
 | **AI YouTube Story Pipeline** | End-to-end AI pipeline: LLM scripts → Flux Schnell images → Kokoro TTS narration → auto-subtitles → video assembly → YouTube upload | [GitHub](https://github.com/sayanrup/Youtube_Audio_Story) |

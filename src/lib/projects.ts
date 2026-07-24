@@ -13,6 +13,35 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "crypto-trading-bot",
+    name: "Crypto Trading Bot",
+    icon: "target",
+    shortDescription:
+      "A support/resistance + structure-shift trading bot for CoinDCX INR futures — fully rule-based live execution, with a DeepSeek backtest filter to measure whether an LLM adds edge.",
+    tags: ["Trading", "Automation", "Python"],
+    github: "https://github.com/sayanrup/Crypto-Trading-Bot",
+    problem:
+      "Most retail algo-trading setups either rely on black-box signals or apply indicators without managing the full trade lifecycle. This bot separates concerns cleanly across isolated modules — zone detection, signal confirmation, risk management, and execution — while keeping the live path 100% deterministic. The LLM is wired only into the backtest to answer a specific research question: would a confidence filter have added edge on top of the mechanical strategy?",
+    howItWorks: [
+      {
+        title: "Detect",
+        description:
+          "zones.py builds support/resistance zones from 4h pivot highs/lows. signals.py scans 5m candles for a valid setup — zone touch, structure shift, trigger candle, and overextension check — and outputs a candidate signal.",
+      },
+      {
+        title: "Execute",
+        description:
+          "risk.py sizes the position and manages stop, breakeven, and trailing mechanically. exchange.py places the order via hand-rolled HMAC-signed CoinDCX REST calls with 3-attempt retry and confirmation. Leverage is hard-locked at 1x — every trade is measured by win rate and R-multiple, never a P&L target.",
+      },
+      {
+        title: "Research",
+        description:
+          "backtest.py replays history through the same signal and risk logic. With --use-filter, filter.py scores each candidate via DeepSeek (OpenRouter) to measure whether an LLM confidence layer improves outcomes. Every trade logs source (rule_only vs filtered) and origin (live vs backtest) so dashboard.html can compare them directly.",
+      },
+    ],
+    techStack: ["Python", "CoinDCX REST API", "DeepSeek via OpenRouter", "Chart.js", "HMAC Auth"],
+  },
+  {
     slug: "quality-audit-agent",
     name: "Quality Audit Agent",
     icon: "target",
