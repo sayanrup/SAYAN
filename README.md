@@ -1,16 +1,16 @@
-# Sayan Samanta — Portfolio & AI Projects
+# Sayan Samanta — Product Manager Portfolio
 
-Personal portfolio and a home for the AI projects I've built while learning AI.
+Personal portfolio for my Product Management work — experience, impact, and skills — plus the AI side projects I build to stay hands-on with the tech I design products around.
 
-© 2025 Sayan Samanta. Made as part of my journey learning AI.
+© 2025 Sayan Samanta.
 
 ---
 
 ## About
 
-I'm a Product Manager with 5+ years of experience at IndiaMART, working on growth, platform, and marketplace products at 22M+ MAU scale. This site is where I document the AI projects I build as I explore what's possible with modern AI tooling — practical tools scoped to real problems, not demos.
+I'm a Product Manager with 5+ years of experience at IndiaMART, building growth, platform, and AI-native products for a B2B marketplace of 45M+ pages and 22M+ monthly users. ₹4 Cr+ in annual cost savings, 5× growth in AI-search traffic, and a 7% reduction in customer churn — see [Experience](https://sayanrup.github.io/SAYAN/#experience) and [Resume](./Sayan_Samanta_Resume.pdf) for the full story.
 
-## Live Projects
+## Side Projects
 
 | Project | Description | Links |
 |-------|-------------|-------|
