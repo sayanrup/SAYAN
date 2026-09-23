@@ -13,8 +13,72 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "anvaya",
+    name: "Anvaya — Self-Composing Landing Page",
+    icon: "palette",
+    shortDescription:
+      "A guardrailed, self-composing landing page that personalizes itself per visitor from URL signals — an AI-PM case study on segmentation, content guardrails, and zero-click search.",
+    tags: ["PM Case Study", "Personalization", "Growth"],
+    github: "https://github.com/sayanrup/Anvaya",
+    liveUrls: [
+      {
+        label: "Launch (GitHub Pages)",
+        url: "https://sayanrup.github.io/Anvaya/",
+      },
+    ],
+    problem:
+      "Search is going zero-click — a growing share of buyers now form their first impression of a brand from an AI assistant's summary, not from the page itself. That changes the brief two ways: the page now has two readers (the human deciding on a high-consideration purchase, and the machine deciding what to say about the brand) who must reach the same correct understanding, and the classic 'page A vs page B for everyone' experiment quietly breaks once the page composes itself per visitor. This project is an AI-PM exercise that takes both consequences seriously instead of hand-waving past them.",
+    howItWorks: [
+      {
+        title: "Compose",
+        description:
+          "Reads four signals straight from the URL — intent, source, city, and connection speed — and recomposes the headline, primary answer block, and CTA for that specific visitor, with zero backend, build step, or bundler.",
+      },
+      {
+        title: "Guard",
+        description:
+          "Every piece of copy is drawn from one frozen, human-approved content library; a canRender() guardrail layer validates pricing, timelines, and claims before anything renders — so personalization can compose and reorder approved claims, but never fabricate a new one.",
+      },
+      {
+        title: "Measure",
+        description:
+          "Reframes the experiment as segmented testing — comparing composition-rule v1 vs v2 within a segment, not generic vs personalized across everyone — with qualified-consultation-booking rate per segment as the single leading metric, since the real sales cycle runs too long to power fast iteration.",
+      },
+    ],
+    techStack: ["Vanilla JavaScript", "HTML", "CSS", "No framework or bundler"],
+  },
+  {
+    slug: "filter-genie",
+    name: "Search Filter Generator",
+    icon: "search",
+    shortDescription:
+      "Turns SERP keywords, internal search data, and category research into a tiered, evidence-backed set of search page filters — the way a marketplace PM would derive them by hand, at scale.",
+    tags: ["Search", "Marketplace", "AI"],
+    github: "https://github.com/sayanrup/filter-genie",
+    problem:
+      "Designing search filters for a marketplace category is normally a slow, judgment-heavy exercise — mining SERP and internal search keywords, weighing a category manager's spec rankings, and checking whether sellers actually fill in the fields a filter would depend on. It doesn't scale past a handful of categories a year. This tool encodes that exact analyst process into a repeatable, auditable LLM workflow so it can run against any category's data on demand.",
+    howItWorks: [
+      {
+        title: "Feed",
+        description:
+          "Paste or upload up to five evidence sources per category: Google SERP keywords, internal search keywords, category context notes, a category manager's spec importance ranking, and sample product listings.",
+      },
+      {
+        title: "Analyze",
+        description:
+          "An LLM (your own OpenRouter or LiteLLM key) mines every keyword into filter-dimension buckets, scores each dimension's discriminating power against real volume, and cross-checks proposed filters against actual listing fill-rates before recommending them.",
+      },
+      {
+        title: "Recommend",
+        description:
+          "Outputs a ranked Tier 1 / Tier 2 / Tier 3 filter set — each with a UI pattern, buyer-facing values, a confidence score, and a rationale that must cite a real number from the data. A self-check pass catches unsupported claims before the result is shown.",
+      },
+    ],
+    techStack: ["React", "TanStack Start", "TypeScript", "OpenRouter / LiteLLM"],
+  },
+  {
     slug: "crypto-trading-bot",
-    name: "Crypto Trading Bot",
+    name: "Crypto Trading Bot (CoinDCX)",
     icon: "target",
     shortDescription:
       "A support/resistance + structure-shift trading bot for CoinDCX INR futures — fully rule-based live execution, with a DeepSeek backtest filter to measure whether an LLM adds edge.",
@@ -40,6 +104,35 @@ export const projects: Project[] = [
       },
     ],
     techStack: ["Python", "CoinDCX REST API", "DeepSeek via OpenRouter", "Chart.js", "HMAC Auth"],
+  },
+  {
+    slug: "stock-trading-bot",
+    name: "Stock Trading Bot (NSE)",
+    icon: "target",
+    shortDescription:
+      "A rule-based intraday support/resistance bot for NSE equity cash via Dhan's API — the crypto bot's architecture rebuilt for a broker with real margin limits and a mandatory square-off.",
+    tags: ["Trading", "Automation", "Python"],
+    github: "https://github.com/sayanrup/Stock-Trading-Bot",
+    problem:
+      "Intraday equity trading demands the same discipline as crypto — deterministic execution, disciplined risk management, rigorous backtesting — but a completely different broker API, market calendar, and risk model: real fund and margin limits instead of an assumed leverage multiplier, and a hard mandatory square-off before every close since no position may carry overnight. This bot reuses the proven zones/signals/risk architecture from the crypto bot, rebuilt directly on Dhan's official SDK.",
+    howItWorks: [
+      {
+        title: "Detect",
+        description:
+          "zones.py clusters 1-day swing highs/lows into support/resistance zones. signals.py looks for a structure shift — price breaking the last confirmed swing high/low — combined with a strong trigger candle at an HTF zone on the 15-minute timeframe.",
+      },
+      {
+        title: "Execute",
+        description:
+          "risk.py sizes positions against Dhan's real fund limit and margin-calculator response for that symbol — never an assumed leverage multiplier — then bot-manages every stop, breakeven, and ATR-trailing exit itself by polling price and sending explicit market orders, rather than trusting Dhan's server-side SL triggers.",
+      },
+      {
+        title: "Square off",
+        description:
+          "bot.py force-closes every open position as market close approaches, overriding the strategy's own exit logic entirely — no overnight positions, ever. DeepSeek (via OpenRouter) scores confidence only in offline backtesting against a rule-only baseline; it is never imported by the live bot.",
+      },
+    ],
+    techStack: ["Python", "Dhan API (dhanhq SDK)", "DeepSeek via OpenRouter", "Chart.js"],
   },
   {
     slug: "quality-audit-agent",
