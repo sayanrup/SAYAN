@@ -1,40 +1,50 @@
-# Sayan Samanta — Product Manager Portfolio
+# Sayan Samanta | Product Manager Portfolio
 
-Personal portfolio for my Product Management work — experience, impact, and skills — plus the AI side projects I build to stay hands-on with the tech I design products around.
+Product Manager | Marketplace Growth | UI/UX, SEO & Search | AI Products
 
-© 2025 Sayan Samanta.
+Live site: https://sayanrup.github.io/SAYAN/
+
+© 2026 Sayan Samanta.
 
 ---
 
 ## About
 
-I'm a Product Manager with 5+ years of experience at IndiaMART, building growth, platform, and AI-native products for a B2B marketplace of 45M+ pages and 22M+ monthly users. ₹4 Cr+ in annual cost savings, 5× growth in AI-search traffic, and a 7% reduction in customer churn — see [Experience](https://sayanrup.github.io/SAYAN/#experience) and [Resume](./Sayan_Samanta_Resume.pdf) for the full story.
+Product Manager with 5+ years of experience, owning product detail and search pages (desktop, mobile web, app) across 45M+ pages and 22M+ monthly users. Lead a cross-functional team of 8, reporting to the VP, Marketplace, and mentored 2 APMs.
 
-## Side Projects
+- Lifted enquiry conversion 15% by winning leadership buy-in for category-based page design.
+- Saved INR 4 Cr+ annually by owning the end-to-end replacement of a partner BPO with automated lead approval.
+- Scaled Auditmate from hackathon win to an LLM quality platform used by 3 teams: category, frontend, RFQ.
+- Grew AI-search users 5x (1L to 5L) through a content quality and SEO clean-up.
+- 4x Employee of the Year, IndiaMART (2022, 2023, 2024, 2025).
+
+Full details: [Case Studies](https://sayanrup.github.io/SAYAN/#case-studies), [Experience](https://sayanrup.github.io/SAYAN/#experience) and the [Resume (PDF)](./Sayan_Samanta_PM_CV.pdf).
+
+## AI Builds
 
 | Project | Description | Links |
 |-------|-------------|-------|
-| **Anvaya** | Self-composing landing page that personalizes per visitor from URL signals — an AI-PM case study on content guardrails and segmented testing | [Launch](https://sayanrup.github.io/Anvaya/) · [GitHub](https://github.com/sayanrup/Anvaya) |
-| **Search Filter Generator** | Turns SERP + internal search keywords and category research into a tiered, evidence-backed set of search page filters | [GitHub](https://github.com/sayanrup/filter-genie) |
-| **Crypto Trading Bot** | Support/resistance + structure-shift algo for CoinDCX INR futures — rule-based live execution, DeepSeek backtest filter to measure LLM edge | [GitHub](https://github.com/sayanrup/Crypto-Trading-Bot) |
-| **Stock Trading Bot (NSE)** | Same rule-based architecture, rebuilt for NSE equity cash via Dhan's API — real margin limits, mandatory intraday square-off | [GitHub](https://github.com/sayanrup/Stock-Trading-Bot) |
-| **Job Search Automation** | Scans Gmail for job leads, generates tailored CVs, cover letters, and outreach messages via AI, and saves to Drive, Gmail drafts, and Sheets | [Launch](https://sayanrup.github.io/Job_Hunt) · [GitHub](https://github.com/sayanrup/Job_Hunt) |
-| **Vibe Coded RPG Game** | A browser-based zombie survival RPG with an AI Game Master that narrates free-text actions via a live LLM | [Launch](https://sayanrup.github.io/Survive_The_Z/) · [GitHub](https://github.com/sayanrup/Survive_The_Z) |
-| **AI YouTube Story Pipeline** | End-to-end AI pipeline: LLM scripts → Flux Schnell images → Kokoro TTS narration → auto-subtitles → video assembly → YouTube upload | [GitHub](https://github.com/sayanrup/Youtube_Audio_Story) |
-| **Quality Audit Agent** | An AI auditor that checks buy leads and product listings for quality issues using vision-capable models | [Launch](https://sayanrup.github.io/Lead-Quality-Audit-Agent/) · [GitHub](https://github.com/sayanrup/Lead-Quality-Audit-Agent) |
-| **Underworld: Mafia Life** | A crime syndicate management RPG — rise from Associate to Boss, with Claude generating noir narrative flavor for every event | [Launch](https://sayanrup.github.io/Mafia_Life/) · [GitHub](https://github.com/sayanrup/Mafia_Life) |
-| **HTML Audit Agent** | Audits any URL for HTML quality, SEO, and accessibility issues | [Railway](https://htmlauditoragent-production.up.railway.app/) · [GitHub Pages](https://sayanrup.github.io/HTML_Auditor_Agent/html-audit-agent.html) |
-| **KPI Analyzer Dashboard** | Upload KPI data and get AI-driven trend analysis and insights | [GitHub Pages](https://sayanrup.github.io/KPI_Analyzer_Dashboard/KPI_dashboard.html) |
-| **Bug Tracker Dashboard** | Upload bug exports and track SLA breach rates by priority with working-day TAT calculations and exception management | [Launch](https://sayanrup.github.io/Bug_Tracker/) · [GitHub](https://github.com/sayanrup/Bug_Tracker) |
+| **Search Filter Generator** | Turns SERP and internal search keywords plus category research into a tiered, evidence-backed set of search page filters | [GitHub](https://github.com/sayanrup/filter-genie) |
+| **Quality Audit Agent** | AI auditor for buy leads and product listings. This prototype became Auditmate at IndiaMART | [Launch](https://sayanrup.github.io/Lead-Quality-Audit-Agent/) · [GitHub](https://github.com/sayanrup/Lead-Quality-Audit-Agent) |
+| **KPI Analyzer Dashboard** | Upload KPI data and get AI-driven trend analysis and insights | [Launch](https://sayanrup.github.io/KPI_Analyzer_Dashboard/KPI_dashboard.html) · [GitHub](https://github.com/sayanrup/KPI_Analyzer_Dashboard) |
+| **Bug Tracker Dashboard** | Upload bug exports and track SLA breach rates by priority with working-day TAT calculations | [Launch](https://sayanrup.github.io/Bug_Tracker/) · [GitHub](https://github.com/sayanrup/Bug_Tracker) |
+| **Anvaya** | Self-composing landing page that personalizes per visitor from URL signals, with content guardrails | [Launch](https://sayanrup.github.io/Anvaya/) · [GitHub](https://github.com/sayanrup/Anvaya) |
+| **Job Search Automation** | Scans Gmail for job leads and generates tailored CVs, cover letters and outreach messages | [Launch](https://sayanrup.github.io/Job_Hunt) · [GitHub](https://github.com/sayanrup/Job_Hunt) |
 
-## Tech Stack
+### Other experiments
 
-- **Framework:** React + TanStack Router
-- **Build:** Vite + TypeScript
-- **Styling:** Tailwind CSS
-- **Runtime:** Bun
+| Project | Description | Links |
+|-------|-------------|-------|
+| **Crypto Trading Bot (CoinDCX)** | Rule-based support/resistance bot for CoinDCX INR futures; DeepSeek used only in backtesting | [GitHub](https://github.com/sayanrup/Crypto-Trading-Bot) |
+| **Stock Trading Bot (NSE)** | Same architecture for NSE equity cash via Dhan's API, with a mandatory intraday square-off | [GitHub](https://github.com/sayanrup/Stock-Trading-Bot) |
+| **Vibe Coded RPG Game** | Browser zombie survival RPG with an AI Game Master | [Launch](https://sayanrup.github.io/Survive_The_Z/) · [GitHub](https://github.com/sayanrup/Survive_The_Z) |
+| **Underworld: Mafia Life** | Crime syndicate management RPG with Claude-written flavor text | [Launch](https://sayanrup.github.io/Mafia_Life/) · [GitHub](https://github.com/sayanrup/Mafia_Life) |
+| **AI YouTube Story Pipeline** | Outline to narrated YouTube video: LLM scripts, images, TTS, subtitles, upload | [GitHub](https://github.com/sayanrup/Youtube_Audio_Story) |
+| **HTML Audit Agent** | Audits any URL for HTML quality, SEO and accessibility issues | [Launch](https://htmlauditoragent-production.up.railway.app/) · [GitHub](https://github.com/sayanrup/HTML_Auditor_Agent) |
 
-## Running Locally
+## How the site is served
+
+GitHub Pages serves the standalone `index.html` at the repo root. The React/TanStack app in `src/` is a separate codebase and is not what the live site shows.
 
 ```bash
 bun install
